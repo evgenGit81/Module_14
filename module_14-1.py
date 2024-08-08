@@ -26,7 +26,7 @@ cursor.execute("CREATE INDEX IF NOT EXISTS idx_email ON Users (email)")
     #     k = (i + 1)
     #     cursor.execute("UPDATE Users SET balance = ? WHERE id = ?", ('500', f"{k}"))
     # ind = 0
-"""Удаляем каждую третью запись начиная с первой"""
+"""Удаляем каждую третью запись начиная с первой (ориентируясь на пример из задания)"""
 for i in range(1, 11, 3):
     cursor.execute("DELETE FROM Users WHERE username = ?", (f"User{i}",))
 
